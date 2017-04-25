@@ -1,0 +1,13 @@
+"3.11.2 (created: 2016/01/28 00:20:35)
+
+map J <C-d>
+map K <C-u>
+map gpn :panorama<Space>switch<Space><Tab>
+map gpp :panorama<Space>pushtab<Space><Tab>
+map gps :panorama<Space>switch<Space>
+map gpl :panorama<Space>list<Return>
+set showstatuslinks=2
+set status=input,location,bookmark,history,tabcount,position,ssl
+source! /home/steffen/.vimperatorrc.local
+
+" vim: set ft=vimperator:
