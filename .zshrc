@@ -60,8 +60,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 if [ "$TERM" != "dumb" ]; then
     eval "`dircolors -b`"
     alias ls='ls --color=auto'
-    #alias dir='ls --color=auto --format=vertical'
-    #alias vdir='ls --color=auto --format=long'
 fi
 
 alias ll='ls -alh'
@@ -73,7 +71,6 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g G='| egrep --color'
-#alias -g X='| xargs egrep --color' #bescheuerte Idee! wie heißt noch mal der X-Server? genau!
 alias :q='exit'
 alias todo=task
 alias dconf-search='gsettings list-recursively | less'
