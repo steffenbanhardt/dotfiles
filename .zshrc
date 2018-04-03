@@ -62,22 +62,22 @@ if [ "$TERM" != "dumb" ]; then
     alias ls='ls --color=auto'
 fi
 
-alias ll='ls -alh'
+#alias ll='ls -alh'
 alias grep='egrep --color'
 alias egrep='egrep --color'
 alias cd..='cd ..'
 alias cls=clear
-alias -g ...='../..'
-alias -g ....='../../..'
-alias -g .....='../../../..'
+#alias -g ...='../..'
+#alias -g ....='../../..'
+#alias -g .....='../../../..'
 alias -g G='| egrep --color'
 alias :q='exit'
 alias todo=task
 alias dconf-search='gsettings list-recursively | less'
 alias jrnl=' jrnl'
 
-alias RMTEX='rm -Iv */**/*(aux|bbl|bcf|blg|blx\.bib|log|out|run\.xml|~)'
-alias rmtex='rm -Iv ./*(aux|bbl|bcf|blg|blx\.bib|log|out|run\.xml|~)'
+alias RMTEX='rm -Iv */**/*(aux|bbl|bcf|blg|blx\.bib|log|lof|out|run\.xml|~)'
+alias rmtex='rm -Iv ./*(aux|bbl|bcf|blg|blx\.bib|log|lof|out|run\.xml|~)'
 
 heute=$(date +%Y-%m-%d)
 gestern=$(date -d "yesterday" +%Y-%m-%d)
@@ -96,7 +96,7 @@ Sa=$(date -d "next Saturday" +%Y-%m-%d)
 ### oh-my-zsh
 #
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -107,7 +107,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="smb"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -148,7 +148,7 @@ ZSH_THEME="smb"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git) #vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 

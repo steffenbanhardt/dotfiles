@@ -14,6 +14,7 @@ general {
 
 #order += "ipv6"
 #order += "disk /"
+order += "path_exists VPN"
 order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "load"
@@ -60,12 +61,17 @@ run_watch DHCP {
         pidfile = "/var/run/dhclient*.pid"
 }
 
+path_exists VPN {
+	format = "<span background='#202020'>Reboot? %status</span>"
+	path = "/var/run/reboot-required"
+}
+
 #run_watch VPN {
 #        pidfile = "/var/run/vpnc/pid"
 #}
 
 tztime local {
-        format = "<span background='#202020'> %time </span>"
+        #format = "<span background='#202020'> %time </span>"
 	format_time = "%Y-%m-%d %H:%M"
 }
 

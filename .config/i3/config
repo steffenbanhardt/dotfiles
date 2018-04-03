@@ -97,16 +97,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # assign workspace names to variables
-set $ws1 "1: 🌍"
-set $ws2 "2: ℜ"
+set $ws1 "1:🌍"
+set $ws2 "2:ℜ"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9: ♫"
-set $ws10 "10: ⛓"
+set $ws8 "8:🐾"
+set $ws9 "9:♫"
+set $ws10 "10:⛓"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -153,10 +153,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym odiaeresis resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 12 px or 12 ppt
+        bindsym k resize grow height 12 px or 12 ppt
+        bindsym l resize shrink height 12 px or 12 ppt
+        bindsym odiaeresis resize grow width 12 px or 12 ppt
 	# das selbe mit kleineren Schritten
         bindsym u resize shrink width 2 px or 2 ppt
         bindsym i resize grow height 2 px or 2 ppt
@@ -187,6 +187,7 @@ mode "AppLaunch" {
 	bindsym g exec chromium-browser
 	bindsym Return exec urxvtcd
 	bindsym b exec ~/bin/Beerdigung.sh
+	bindsym l exec ~/bin/Gottesdienst.sh
 
         # back to normal: Escape
         bindsym Escape mode "default"
@@ -209,22 +210,30 @@ bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Screenshots mit scrot
+# actives Fenster 
+bindsym Print exec scrot -u '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Bilder/Screenshots/'
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        #status_command i3blocks
+	status_command /usr/local/bin/py3status -c ~/.config/i3-py3status/config 
+	#status_command i3status
         tray_output primary
 }
 
 # screen lock
-bindsym Control+Shift+l exec i3lock
+bindsym $Mod+Control+l exec i3lock
 
 # Workspace assignments
 assign [class="Conky"] $ws10
 assign [class="Quodlibet"] $ws9
 assign [class="Firefox"] $ws1
-for_window [title=".*\(Privater Modus\).*"] move to workspace $ws8
+assign [class="Chromium-browser"] $ws1
+for_window [title=".*taz.*201.*pdf"] move to workspace $ws8
+for_window [title=".*\(Privater Modus\).*"] move to workspace $ws7
+for_window [title=".*euer Tab - Chromiu.*"] move to workspace $ws7
 
 ## Startup exec
 ## Set startup volume

@@ -26,9 +26,11 @@ set incsearch		" do incremental searching
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo, so
+" that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
+
+
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
@@ -162,6 +164,8 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
+nmap <leader>np O\newpage{}<ESC><C-j><ESC>
+
 " -- Ctrlp
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
@@ -185,3 +189,8 @@ nmap <leader>gf :e <cfile>.tex<CR>
 set thesaurus+=~/.vim/thesaurus/openthesaurus.txt
 set dictionary+=/usr/share/dict/ngerman
 set dictionary+=~/.vim/dictionary/myDict
+
+autocmd FileType kerboscript setlocal commentstring=//%s
+
+set undofile " persistentes undo
+set undodir=~/.vim/undooo

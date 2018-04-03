@@ -1,0 +1,123 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+	markup = pango
+        interval = 5
+}
+
+order += "sysdata"
+order += "group updates"
+order += "wireless _first_"
+order += "group mix"
+order += "battery 1"
+#order += "battery_level"
+order += "group keyb"
+order += "group clock"
+
+sysdata {
+format = "[\?color=cpu CPU: {cpu_usage}% @] [\?color=temp {cpu_temp}°C] [\?color=mem Mem: {mem_used_percent}%] [\?color=load Load:{load1}]"
+ }
+
+group updates {
+    cycle = 6
+    fixed_width = true
+    button_next = 1
+    button_prev = 3
+
+    apt_updates { }
+
+    file_status { 
+	path = "/var/run/reboot-required"
+	color_bad = "#00FF00"
+	color_good = "#FF0000"
+	icon_unavailable = " ● "
+	icon_available = " ✗ "
+    }
+
+}
+
+wireless _first_ {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
+
+battery 1 {
+        format = "%status %percentage %remaining" # %emptytime"
+        format_down = "No battery"
+        status_chr = "⚇ CHR"
+        status_bat = "⚡ BAT"
+        status_full = "☻ FULL"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 25
+	threshold_type = time
+}
+
+#battery_level {
+#format = "{percent}% {time_remaining}"
+#}
+
+
+group mix {
+
+    cycle = 3
+    fixed_width = true
+    button_next = 1
+    button_prev = 3
+
+    volume master {
+	format = "♪ %volume"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+    }
+
+    backlight {
+	format = "☼ {level}%"
+	cache_timeout = 5
+    }
+
+}
+
+group keyb {
+    #Kein cycle, denn layout selten gebraucht
+    #cycle = 6
+    fixed_width = true
+    button_next = 1
+    button_prev = 3
+
+    keyboard_locks { 
+	format = "{caps} {num}"
+	icon_caps_off = " "
+	icon_caps_on = "C"
+	icon_num_off = "N"
+	icon_num_on = "N"
+    }
+
+    # define keyboard layouts that can be switched between
+    keyboard_layout {
+	layouts = ['de', 'gb', 'gr', 'il']
+	color_de = '#00FF00'
+	color_gb = '#FFFF00'
+	color_gr = '#0000FF'
+	color_il = '#00FFFF'
+    }
+}
+
+group clock {
+
+    clock {
+	format_time = "%Y-%m-%d %H:%M"
+    }
+
+    pomodoro {
+	format = "{mmss} {bar}"
+    }
+
+}
