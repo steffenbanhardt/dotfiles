@@ -67,10 +67,7 @@ alias grep='egrep --color'
 alias egrep='egrep --color'
 alias cd..='cd ..'
 alias cls=clear
-#alias -g ...='../..'
-#alias -g ....='../../..'
-#alias -g .....='../../../..'
-alias -g G='| egrep --color'
+alias -g G='| rg'
 alias :q='exit'
 alias todo=task
 alias dconf-search='gsettings list-recursively | less'
@@ -184,3 +181,5 @@ source $ZSH/oh-my-zsh.sh
 ### END
 #
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

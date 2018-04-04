@@ -185,6 +185,7 @@ mode "AppLaunch" {
 
         bindsym t exec thunar
 	bindsym f exec firefox
+        bindsym a exec ~/bin/aria2c-start
 	bindsym w exec lowriter
 	bindsym c exec localc
 	bindsym q exec quodlibet

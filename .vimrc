@@ -194,3 +194,6 @@ autocmd FileType kerboscript setlocal commentstring=//%s
 
 set undofile " persistentes undo
 set undodir=~/.vim/undooo
+
+" fzf
+set rtp+=~/.fzf
