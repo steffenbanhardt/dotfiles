@@ -72,6 +72,8 @@ alias :q='exit'
 alias todo=task
 alias dconf-search='gsettings list-recursively | less'
 alias jrnl=' jrnl'
+alias lx='exa -laFHh'
+alias lxg='exa -laFHh --git --git-ignore'
 
 alias RMTEX='rm -Iv */**/*(aux|bbl|bcf|blg|blx\.bib|log|lof|out|run\.xml|~)'
 alias rmtex='rm -Iv ./*(aux|bbl|bcf|blg|blx\.bib|log|lof|out|run\.xml|~)'
