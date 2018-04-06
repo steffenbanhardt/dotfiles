@@ -146,7 +146,7 @@ map <Leader>lb :<C-U>exec '!biber '.Tex_GetMainFileName(':p:t:r')<CR>
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 " -- Buffer
 "buffer nicht entladen
@@ -179,10 +179,11 @@ let g:ctrlp_working_path_mode = 'c'
 " Use a leader instead of the actual named binding
 nmap <leader>p :CtrlP<cr>
 
+" Spell
 nmap <leader>ns :set nospell<CR>
 nmap <leader>sp :set spell<CR>
 
-" Problem ist, dass die Dateiendung erwartet wird
+" Gofile für nicht-existente LaTeX-Files
 nmap <leader>gf :e <cfile>.tex<CR>
 
 " Thesaurus-Datei
@@ -197,3 +198,7 @@ set undodir=~/.vim/undooo
 
 " fzf
 set rtp+=~/.fzf
+nmap <leader>e :FZF<CR>
+nmap <leader>e! :FZF!<CR>
+nmap <leader>e.. :FZF ..<CR> 
+nmap <leader>ee :FZF 

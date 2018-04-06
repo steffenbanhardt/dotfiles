@@ -7,10 +7,14 @@
 
 !! Ubuntu Mono
 URxvt*letterSpace: -1
-URxvt.font:           xft:Ubuntu Mono:pixelsize=16:antialias=true:hinting=true
-URxvt.boldFont:       xft:Ubuntu Mono:bold:pixelsize=16:antialias=true:hinting=true
-URxvt.italicFont:     xft:Ubuntu Mono:italic:pixelsize=16:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:Ubuntu Mono:bold:italic:pixelsize=16:antialias=true:hinting=true
+URxvt.font:           xft:Ubuntu Mono derivative Powerline:pixelsize=16:antialias=true:hinting=true
+URxvt.boldFont:       xft:Ubuntu Mono derivative Powerline:bold:pixelsize=16:antialias=true:hinting=true
+URxvt.italicFont:     xft:Ubuntu Mono derivative Powerline:italic:pixelsize=16:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:Ubuntu Mono derivative Powerline:bold:italic:pixelsize=16:antialias=true:hinting=true
+!URxvt.font:           xft:Ubuntu Mono:pixelsize=16:antialias=true:hinting=true
+!URxvt.boldFont:       xft:Ubuntu Mono:bold:pixelsize=16:antialias=true:hinting=true
+!URxvt.italicFont:     xft:Ubuntu Mono:italic:pixelsize=16:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:Ubuntu Mono:bold:italic:pixelsize=16:antialias=true:hinting=true
 !URxvt.font:           xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
 !URxvt.boldFont:       xft:DejaVu Sans Mono:bold:pixelsize=14:antialias=true:hinting=true
 !URxvt.italicFont:     xft:DejaVu Sans Mono:italic:pixelsize=14:antialias=true:hinting=true
