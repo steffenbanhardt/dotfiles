@@ -184,5 +184,7 @@ source $ZSH/oh-my-zsh.sh
 ### END
 #
 
+# Removes RPS1 after line was in use
+#setopt transientrprompt
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
