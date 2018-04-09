@@ -183,7 +183,7 @@ set undodir=~/.vim/undooo
 
 " fzf
 set rtp+=~/.fzf
-nmap <leader>e :FZF<CR>
-nmap <leader>e! :FZF!<CR>
-nmap <leader>e.. :FZF ..<CR>
-nmap <leader>ee :FZF
+nmap <leader>e :Files<CR>
+nmap <leader>e! :Files!<CR>
+nmap <leader>e.. :Files ..<CR>
+nmap <leader>ee :Files
