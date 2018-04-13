@@ -193,6 +193,7 @@ mode "AppLaunch" {
 	bindsym Return exec urxvtcd
 	bindsym b exec ~/bin/Beerdigung.sh
 	bindsym l exec ~/bin/Gottesdienst.sh
+	bindsym v exec ~/bin/vga.sh
 
         # back to normal: Escape
         bindsym Escape mode "default"
