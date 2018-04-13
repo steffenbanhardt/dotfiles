@@ -120,8 +120,8 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+ssharp workspace prev
-bindsym $mod+dead_acute workspace next
+bindsym $mod+ssharp workspace prev_on_output
+bindsym $mod+dead_acute workspace next_on_output
 
 bindsym $mod+dead_circumflex workspace back_and_forth
 #bindsym Mod1+Tab workspace back_and_forth
