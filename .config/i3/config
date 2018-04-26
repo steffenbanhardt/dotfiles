@@ -252,3 +252,5 @@ exec --no-startup-id parcellite
 exec --no-startup-id udiskie -s
 # background image
 exec --no-startup-id nitrogen --restore
+
+# vim:filetype=i3
