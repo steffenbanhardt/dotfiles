@@ -174,6 +174,7 @@ nmap <leader>gf :e <cfile>.tex<CR>
 nmap <leader>gL :e ../01-Lesung/<cfile>.tex<CR>
 nmap <leader>gB :e ../01-Lesung/<cfile>.Basis.tex<CR>
 nmap <leader>gP :e ../01-Psalmen/<cfile>.tex<CR>
+nmap <leader>gS :e ../00-Sonntage/<cfile>.tex<CR>
 
 " Thesaurus-Datei
 set thesaurus+=~/.vim/thesaurus/openthesaurus.txt
