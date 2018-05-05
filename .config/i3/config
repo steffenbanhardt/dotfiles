@@ -253,4 +253,11 @@ exec --no-startup-id udiskie -s
 # background image
 exec --no-startup-id nitrogen --restore
 
+#default_border pixel 1
+hide_edge_borders vertical
+# Make some windows use special borders:
+for_window [class="Firefox"] border pixel 1
+for_window [class="Conky"] border pixel 0
+for_window [class="URxvt"] border pixel 1
+
 # vim:filetype=i3
